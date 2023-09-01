@@ -25,6 +25,8 @@ front-size:18px;
 <div class="left"></div>
 <div clases="stuff">
 <br><br>
+<div id="htmlContent">
+
 <h2> <center>RESUME</center></h2>
 <font size="5">S.Ambika<br></front>
 <font size="5">D/O Selvan.k<br></front>
@@ -111,8 +113,28 @@ front-size:18px;
 <ul>
     <li> l haredy declaration that the information punished adove is true to best of my knowlege</li>
 </ul>
-<p class="head"><h3>DATE</h3></p>
-<p class="head"><h3>PLACE</h3></p>
-<div class="bottomright"><h3>SIGNATURE</div></h3>
+
+</div>
+
+<center>
+
+
+<button onclick="printDiv('htmlContent')">Print / Save Pdf</button>
+
+
+</center>
+
+<script type="text/javascript">
+
+      function printDiv(div_id) 
+    	{
+    	  var divToPrint=document.getElementById(div_id);
+    	  var newWin=window.open('','Print-Window');
+    	  newWin.document.open();
+    	  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+    	  newWin.document.close();
+    	  setTimeout(function() { newWin.close();},10);
+    	}
+</script>
 </boby>
 </html>
